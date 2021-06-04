@@ -1,6 +1,6 @@
 class LatLng {
-  final double latitude;
-  final double longitude;
+  final double? latitude;
+  final double? longitude;
 
   LatLng(this.latitude, this.longitude)
       : assert(latitude >= -90 && latitude <= 90, '纬度范围为[-90, 90]!'),

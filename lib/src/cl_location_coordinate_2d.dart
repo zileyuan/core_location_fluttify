@@ -8,8 +8,8 @@ class CLLocationCoordinate2D extends Ref {
   final String tag__ = 'core_location_fluttify';
 
   static Future<CLLocationCoordinate2D> create(
-    double latitude,
-    double longitude,
+    double? latitude,
+    double? longitude,
   ) async {
     final result = await kCLMethodChannel.invokeMethod<Ref>(
       'CLLocationCoordinate2D::createCLLocationCoordinate2D',
@@ -20,8 +20,8 @@ class CLLocationCoordinate2D extends Ref {
 
   // ignore: non_constant_identifier_names
   static Future<List<CLLocationCoordinate2D>> create_batch(
-    List<double> latitudeBatch,
-    List<double> longitudeBatch,
+    List<double?> latitudeBatch,
+    List<double?> longitudeBatch,
   ) async {
     final resultBatch = await kCLMethodChannel.invokeListMethod<Ref>(
       'CLLocationCoordinate2D::create_batchCLLocationCoordinate2D',
